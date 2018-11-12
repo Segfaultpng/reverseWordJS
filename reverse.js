@@ -26,7 +26,7 @@ var reverse = function(){
 
 
     //change reversedtext to be what our reversed word array has inside of it
-    document.getElementById("reversedtext").innerText = reversedWordsArr.join(" ");
+    document.getElementById("reversedtext").textContent = reversedWordsArr.join(" ");
 
 
 }
