@@ -5,15 +5,16 @@ var reverse = function(){
     var wordsArr = string.split(" ");
     var reversedWordsArr= [];
 
-    for(var x = 0; x< wordsArr.length; x++){
-        var reversedWord = "";
-        for(var y = wordsArr[x].length - 1; y >= 0; y--){
-  
-            reversedWord += wordsArr[x][y];
-        }
-        reversedWordsArr.push(reversedWord);
+    
+    wordsArr.forEach(word => {
+        var reversedWord = '';
 
-    }
+        for(var i = word.length - 1; i >= 0; i--){
+            reversedWord += word[i];
+        }
+
+        reversedWordsArr.push(reversedWord);
+    })
 
 
     document.getElementById("reversedtext").innerText = reversedWordsArr.join(" ");
